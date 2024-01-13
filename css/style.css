@@ -1,12 +1,13 @@
 /*Shared Style  */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+* {
     margin: 0px;
     padding: 0px;
-    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
     font-family: 'Work Sans', sans-serif;
-
 }
-.btn-primary{
+
+.btn-primary {
     background: #FF900E;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -18,98 +19,183 @@
     font-weight: 600;
     padding: 20px 25px;
     border: 0px;
-    cursor: pointer; 
-    margin-bottom: 70px;
-    /* For showing a pointer on button */
+    cursor: pointer;
+    margin-bottom: 25px;
+    /* For showing a pointer on button and root font size basically 16px so 1rem means 16px. */
 }
 
 /* Style for Header Section */
-header{
+header {
     background: #ff900e1a;
     padding: 50px 240px;
 }
-nav{
+
+/* jeheto body tar moddhe header bose geche tar mane header section alada kore body nei nai body theke tai ekhane header moddhe max width use korar dorkar nai. header moddhe nav banner content ar banner pic ache sob e header modde je padding deoa hoich ta pabe */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav h2{
+
+nav h2 {
     font-size: 2.4rem;
     font-weight: 700;
     color: #131313;
 }
-nav>ul{
+
+nav>ul {
     display: flex;
     font-size: 1rem;
     font-weight: 500;
 }
-nav ul li{
+
+nav ul li {
     margin-right: 40px;
     list-style: none;
 }
-ul li a{
+
+ul li a {
     text-decoration: none;
     color: #424242;
 }
-.banner{
+
+/* .banner{
     margin: 115px auto 45px;
-}
-.banner-content{
+} */
+.banner-content {
     max-width: 800px;
-    margin: 0px auto;
-    text-align: center;  
+    margin: 115px auto 5px;
+    text-align: center;
 }
 
-.banner-title{
+.banner-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+.banner-title-1 {
+    margin-top: 0rem;
     font-size: 4rem;
     font-weight: 700;
     color: #131313;
     margin-bottom: 20px;
 }
 
-.banner-description{
+.banner-description {
     font-size: 1rem;
     font-weight: 400;
     color: #727272;
     margin-bottom: 20px;
 }
-.banner img{
+
+img {
     width: 100%;
+}
+
+/* Feautures Section */
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 73px;
+    padding: 50px 300px;
+}
+
+.features-photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 24px;
+    border: 0px;
+}
+.features-photo img{
+    width: 100%;
+}
+
+.features-title {
+    color: #727272;
+    font-size: 2.80rem;
+    font-weight: 500;
+    margin-bottom: 1.80rem;
+}
+
+.dark {
+    color: #131313;
+    font-weight: 700;
+
+}
+
+.color {
+    color: #FF900E;
+
+}
+
+.features-description {
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.50rem;
+    /* 162.5% */
+    margin-bottom: 1.80rem;
+    max-width: 537px;
 }
 
 /* Styles for media queries of small devices (Iphone SE 375*667) */
 @media screen and (max-width:576px) {
-    header{
+    header {
         padding: 10px 20px;
     }
+
     nav {
         flex-direction: column;
     }
-    nav ul li{
+
+    nav ul li {
         margin-right: 10px;
         margin-top: 20px;
         font-size: 1.10rem;
         font-weight: 700;
-        
+
     }
-    .banner-title{
+
+    .banner-title {
         font-size: 3rem;
     }
-    .banner-description{
+
+    .banner-description {
         font-size: .97rem;
+    }
+    /* Featurs section */
+    .features{
+        flex-direction: column;
+        padding: 20px;
     }
 }
 
-/* Style for media queries of Medium devices (Iphone XR 896*414) */
-@media screen and (min-width:668px) and (max-width:992px) {
-    header{
+/* Style for media queries of Medium devices ( Pixel 5 851*393) */
+@media screen and (min-width:576px) and (max-width:960px) {
+    header {
         padding: 50px 100px;
     }
-    nav{
+
+    nav {
         gap: 140px;
     }
-    nav ul li{
+
+    nav ul li {
         margin-right: 10px;
     }
-    
+
+    /* Features Section */
+    .features{
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 10px;
+    }
+    .features-content{
+        text-align: center;
+    }
+
 }
